@@ -59,6 +59,6 @@ def fit_batch(model, target_model, start_states, actions, rewards, next_states, 
 
 
 def choose_best_action(model, state):
-    state_reshape = np.reshape(state, (1, config.atari_shape[0], config.atari_shape[1], config.atari_shape[2]))
+    state_reshape = np.reshape(state, (1, config.geese_shape[0], config.geese_shape[1], config.geese_shape[2]))
     q_value = model.predict([state_reshape, np.ones((1, config.num_actions))], batch_size=1)
     return np.argmax(q_value[0])
