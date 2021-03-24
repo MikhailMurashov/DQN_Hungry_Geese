@@ -26,7 +26,7 @@ color = {
 }
 
 
-def get_image(obs):
+def get_image_from_obs(obs):
     img = np.zeros((7 * 11), dtype=np.float32)
 
     # whole body position
